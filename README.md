@@ -1,5 +1,4 @@
 # Detyre-Kursi
-# README.md
 
 # Simple Blockchain Implementation
 
