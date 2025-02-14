@@ -10,6 +10,7 @@ This project is a basic blockchain implementation in Python. It includes:
 
 ## Requirements
 - Python 3.x
+- Required libraries: `hashlib`, `time`, `json`
 
 ## Installation
 ```sh
@@ -24,7 +25,8 @@ python blockchain.py
 ## Features
 - Adds new blocks to the chain.
 - Implements Proof of Work with adjustable difficulty.
-- Ensures blockchain integrity.
+- Ensures blockchain integrity through validation.
+- Uses cryptographic hashing for security.
 
 ## Example Usage
 ```python
@@ -33,6 +35,11 @@ block1 = Block(1, blockchain.get_latest_block().hash, time.time(), "Transaction 
 blockchain.proof_of_work(block1)
 blockchain.add_block(block1)
 print("Blockchain is valid:", blockchain.validate_chain())
+```
+
+## Expected Output
+```sh
+Blockchain is valid: True
 ```
 
 # Git Automation Script
@@ -49,3 +56,4 @@ git push origin main
 ```sh
 chmod +x git_auto.sh
 ./git_auto.sh
+```
